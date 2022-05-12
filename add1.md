@@ -1,18 +1,18 @@
 # 追加資料
 
-# サンプルコード集
+##  サンプルコード集
 
-全角→半角の変換などは不要、このままコピペすれば動きます
+全角→半角の変換などは不要、このままコピペすれば動きます。
 
-- 直リンク読み込み
+### 直リンク読み込み
 
 ```python
 !wget https://raw.githubusercontent.com/kasago206/test/main/colortv.csv
 !head colortv.csv
 ```
 
-- マウント
-- マウントする前に必ず「Data」フォルダを作成し、gdp_alt.csvを置いておくこと、フォルダが存在しない場合マウントできない
+### マウント
+- マウントする前に**必ず**「Data」フォルダをgoogle driveのルートディレクトリに作成し、中にgdp_alt.csvを置いておくこと。 フォルダが存在しない場合自動で作成してくれる機能は無いのでマウントできない。
 
 ```python
 from google.colab import drive
@@ -24,7 +24,7 @@ file_data = pd.read_csv('drive/My Drive/Data/gdp_alt.csv')
 file_data.head()
 ```
 
-- データフレーム作成
+### データフレーム作成
 
 ```python
 import numpy as np
@@ -43,7 +43,7 @@ print(sample_df)
 sample_df . to_csv("array.csv")
 ```
 
-- データフレーム結合
+### データフレーム結合
 
 ```python
 df_1 = pd.DataFrame({
@@ -58,7 +58,7 @@ df_2 = pd.DataFrame({
 print(pd.concat([df_1, df_2]))
 ```
 
-- xlsxファイル読み込み
+### xlsxファイル読み込み
 
 ```python
 df_3 = pd.read_excel('drive/My Drive/Data/data1.xlsx')
