@@ -64,3 +64,15 @@ print(pd.concat([df_1, df_2]))
 df_3 = pd.read_excel('drive/My Drive/Data/data1.xlsx')
 df_3.head()
 ```
+
+import pandas as pd
+df = pd.read_csv("nvidia.csv") 
+print(df.head())
+print(df.tail())
+
+#収益率
+nv_s = (df.iloc[0,1]-df.iloc[252,1])/df.iloc[252,1]*100
+print("収益率=",round(nv_s, 2),"%")
+#標準偏差
+nv_h = (df["終値"].std())
+print("標準偏差=",round(nv_h, 2))
